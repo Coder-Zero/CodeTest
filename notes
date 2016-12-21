@@ -1,0 +1,11 @@
+- Added features shown in useLoger to the original Logger class.
+- Added the path and flag properties to the Logger class in order
+  to give more flexibility to have logger work with old and new functionality.
+- Modified code to so that if flag and or path aren't set that there are defaults
+  to fall back on.
+- Main thing was the validation of existing and new functionality to make sure it didn't
+  break in case of 'null' being passed in or something besides a JS object is passed in for format().
+  Along the same lines, to make sure that if the user wanted or accidentally specified a file path that
+  did not exist, that it would create the file path and going forward append to it if it already existed.
+- Also modified certain functions of return something simple to better test, like color and message from transport() and 'false' from format.
+- Future enhancement that I noticed late, would be to add a Timestamp property to the Logger class.  Logs in general have a Timestamp.
